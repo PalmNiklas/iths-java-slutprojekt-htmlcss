@@ -6,6 +6,9 @@
 Surfa runt på webben och leta inspiration efter en webbplats du vill bygga. Det behöver inte vara något fancy.
 Tänk på att inte göra det för stort, några enstaka sidor räcker gott och väl.
 
+* Tänker skapa en hemsida för ett bryggeri. Ska ha minst två sidor som fungerar på mobil och desktop. 
+* Mockup på mobilverisionen finns på https://www.figma.com/file/JR7NJUuL2K0qVR1hOgBRWp/Mobile-Version
+
 ### Diskussion och skiss
 Prata med minst en annan kurskamrat om din idé och diskutera saker som 
 * tema
