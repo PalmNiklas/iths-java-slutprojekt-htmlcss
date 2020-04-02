@@ -5,8 +5,16 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: minmax(80px auto) 1000px;
-  grid-template-areas: "nav nav nav" "header header header"; }
+  grid-template-rows: minmax(3rem, auto) 100vh minmax(10rem, auto) minmax(700px, auto) minmax(700px, auto);
+  grid-template-areas: "nav nav nav" "header header header" "divider divider divider" "releases releases releases" "events events events"; }
+
+h1 {
+  font-family: "Special Elite", cursive;
+  font-size: 1rem;
+  text-align: center; }
+
+p {
+  font-family: "Merriweather", serif; }
 
 nav {
   grid-area: nav;
@@ -15,20 +23,72 @@ nav {
   align-items: center;
   padding: 1rem 1rem; }
   nav h1 {
-    font-family: "Special Elite", cursive;
-    font-size: 1rem;
-    margin: 0; }
+    margin: 0;
+    text-transform: uppercase; }
 
 header {
   grid-area: header;
   background-color: brown; }
+  header h1 {
+    font-size: 2rem; }
 
-h1 {
-  font-family: "Special Elite", cursive;
-  font-size: 1rem; }
+.divider {
+  grid-area: divider;
+  background-color: rosybrown;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .divider h1 {
+    font-size: 1.5rem; }
 
-p {
-  font-family: "Merriweather", serif; }
+.releases {
+  grid-area: releases;
+  display: flex;
+  flex-direction: column;
+  background-color: #101D42;
+  justify-content: space-evenly; }
+  .releases img {
+    padding: 1rem;
+    min-width: 300px; }
+  .releases h1 {
+    font-size: 2rem;
+    margin-top: 4rem; }
+  .releases p {
+    padding: 1rem;
+    font-weight: light;
+    font-family: "Merriweather", serif;
+    text-align: center;
+    color: white; }
+  .releases .pattern {
+    mix-blend-mode: darken;
+    min-width: 300px;
+    min-height: 350px;
+    background-image: url("/img/bottles.jpg");
+    align-self: flex-end;
+    background-repeat: no-repeat; }
+
+.events {
+  grid-area: events;
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between; }
+  .events h1 {
+    font-size: 2rem;
+    margin-top: 4rem; }
+
+.event h1 {
+  font-size: 1.5rem;
+  margin: 0; }
+
+.event h2 {
+  font-size: 1rem;
+  font-family: "Merriweather", serif;
+  text-align: center; }
+
+.event:nth-last-of-type(1) {
+  margin-bottom: 4rem; }
 
 /* The Overlay (background) */
 .overlay {
