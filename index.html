@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans+Condensed:300|Special+Elite&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400|Open+Sans+Condensed:300|Special+Elite&display=swap" rel="stylesheet">
     <title>Palm's Brewery</title>
     <script>
         function openNav() {
@@ -40,11 +40,17 @@
             <h1>Palm Brewing Co</h1>
           
             <img src="img/menu.svg" alt="menu icon" onclick="openNav()">
+
            
         </nav>
         <header>
             <h1>PALM'S BREWING COMPANY</h1>
-            <h2>Effortless Excitement</h2>
+            <!-- <picture>
+                <source media="(min-width: 650px)" srcset="img/header_wide.jpg">
+                <source media="(min-width: 465px)" srcset="img/header.jpg">
+                <img src="img/header.jpg" alt="Mountains" style="width:auto;">
+              </picture> -->
+            
         </header>
        
         <section class="divider">
@@ -52,8 +58,27 @@
         </section>
         <section class="releases">
             <h1>New Releases</h1>
-            <img src="img/craft-beers.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora odio provident quam temporibus iure corporis deserunt ab consequuntur perspiciatis blanditiis.</p>
+            <div class="beer-grid">
+            <article class="beer1">
+                <img src="img/craft-beers.jpg" alt="craftbeer">
+                <h2>Hooligan's Headstone IPA</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora odio provident quam temporibus iure corporis deserunt ab consequuntur perspiciatis blanditiis.</p>
+
+            </article>
+            <article class="beer2">
+                <img src="img/craft-beers.jpg" alt="craftbeer">
+                <h2>Hooligan's Headstone IPA</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora odio provident quam temporibus iure corporis deserunt ab consequuntur perspiciatis blanditiis.</p>
+
+            </article>
+            <article class="beer3">
+                <img src="img/craft-beers.jpg" alt="craftbeer">
+                <h2>Hooligan's Headstone IPA</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora odio provident quam temporibus iure corporis deserunt ab consequuntur perspiciatis blanditiis.</p>
+
+            </article>
+        </div>
+            
             <div class="pattern"></div>
         </section>
 
@@ -77,25 +102,36 @@
        </section>
        
        <section class="shop">
-           <h1></h1>
-           <p></p>   
+           <h1>Merchandise</h1>
+           <p>We wanted to create custom- made apparel and merchandise that are just as unique as our beers.
+            Stop by the tasting room or shop online to view the whole collection.</p> 
+            <div class="shop-grid">
+           <img src="img/hoodie.jpg" alt="Guy with hoodie">  
+           <img src="img/beanie.jpg" alt="Girl with beanie">
+           <img src="img/hoodie.jpg" alt="Guy with hoodie">  
+        </div>
+           <div class="shop-button">
+               <a href="">SHOP</a>
+           </div>
+
        </section>
        <footer>
            <article class="social-media">
-               <h1></h1>
+               <h1>Follow</h1>
                <a href="">Facebook</a>
                <a href="">Instagram</a>
                <a href="">Twitter</a>
            </article>
            <article class="opening-hours">
-               <h1></h1>
-               <h2></h2>
-               <h2></h2>
+               <h1>Hours</h1>
+               <h2>Tuesday - Saturday</h2>
+               <h2>12 - 6 pm</h2>
            </article>
            <article>
-               <h1></h1>
-               <a href=""></a>
-               <a href=""></a>
+               <h1>Palm’s Brewing Company</h1>
+               <h2>Torpängsvägen 2</h2>
+               <h2>148 60 Stora Vika</h2>
+               <h2>08 - 711 93 12</h2>
            </article>
            
 

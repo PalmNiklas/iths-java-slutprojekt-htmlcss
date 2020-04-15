@@ -1,72 +1,112 @@
+/* line 5, sass/main.scss */
 body {
-  margin: 0;
-  width: 100vw; }
+  margin: 0; }
 
+/* line 15, sass/main.scss */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: minmax(3rem, auto) 100vh minmax(10rem, auto) minmax(700px, auto) minmax(700px, auto);
-  grid-template-areas: "nav nav nav" "header header header" "divider divider divider" "releases releases releases" "events events events"; }
+  grid-template-rows: minmax(3rem, auto) 100vh minmax(10rem, auto) minmax(700px, auto) minmax(400px, auto) minmax(400px, auto) minmax(425px, auto);
+  grid-template-areas: "nav" "header" "divider" "releases" "events" "shop"  "footer"; }
 
+/* line 31, sass/main.scss */
 h1 {
   font-family: "Special Elite", cursive;
   font-size: 1rem;
   text-align: center; }
 
+/* line 37, sass/main.scss */
 p {
-  font-family: "Merriweather", serif; }
+  font-family: "Merriweather", serif;
+  line-height: 1.6; }
 
+/* line 42, sass/main.scss */
 nav {
   grid-area: nav;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   padding: 1rem 1rem; }
+  /* line 52, sass/main.scss */
   nav h1 {
     margin: 0;
     text-transform: uppercase; }
 
+/* line 61, sass/main.scss */
 header {
   grid-area: header;
-  background-color: brown; }
+  background-image: url("../img/header.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  /* line 72, sass/main.scss */
   header h1 {
-    font-size: 2rem; }
+    font-size: 2rem;
+    color: #FFFFFF;
+    font-style: normal;
+    margin: 2rem; }
 
+/* line 84, sass/main.scss */
 .divider {
   grid-area: divider;
   background-color: rosybrown;
   display: flex;
   justify-content: center;
   align-items: center; }
+  /* line 91, sass/main.scss */
   .divider h1 {
     font-size: 1.5rem; }
 
+/* line 96, sass/main.scss */
 .releases {
+  position: relative;
   grid-area: releases;
   display: flex;
   flex-direction: column;
   background-color: #101D42;
-  justify-content: space-evenly; }
+  justify-content: start;
+  z-index: -2; }
+  /* line 107, sass/main.scss */
   .releases img {
     padding: 1rem;
     min-width: 300px; }
+  /* line 113, sass/main.scss */
   .releases h1 {
     font-size: 2rem;
     margin-top: 4rem; }
+  /* line 117, sass/main.scss */
+  .releases h2 {
+    font-family: "Special Elite", cursive;
+    text-align: center;
+    margin-top: 1rem;
+    margin-block-end: 0;
+    color: white; }
+  /* line 125, sass/main.scss */
   .releases p {
-    padding: 1rem;
-    font-weight: light;
+    margin-block-start: 0;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 300;
     font-family: "Merriweather", serif;
     text-align: center;
     color: white; }
+  /* line 135, sass/main.scss */
   .releases .pattern {
+    position: absolute;
+    margin: 0;
+    bottom: 0;
     mix-blend-mode: darken;
     min-width: 300px;
-    min-height: 350px;
-    background-image: url("/img/bottles.jpg");
+    min-height: 200px;
+    background-image: url("../img/bottles.jpg");
+    background-size: cover;
     align-self: flex-end;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    z-index: -1; }
 
+/* line 152, sass/main.scss */
 .events {
   grid-area: events;
   background-color: skyblue;
@@ -74,23 +114,109 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-between; }
+  /* line 160, sass/main.scss */
   .events h1 {
     font-size: 2rem;
     margin-top: 4rem; }
 
+/* line 166, sass/main.scss */
 .event h1 {
   font-size: 1.5rem;
   margin: 0; }
 
+/* line 170, sass/main.scss */
 .event h2 {
   font-size: 1rem;
   font-family: "Merriweather", serif;
   text-align: center; }
 
+/* line 175, sass/main.scss */
 .event:nth-last-of-type(1) {
   margin-bottom: 4rem; }
 
+/* line 180, sass/main.scss */
+.shop {
+  grid-area: shop;
+  background-color: #2C1E16;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  /* line 186, sass/main.scss */
+  .shop h1 {
+    font-size: 2rem;
+    margin-top: 4rem;
+    color: white; }
+  /* line 191, sass/main.scss */
+  .shop p {
+    text-align: center;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 300;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 0; }
+  /* line 200, sass/main.scss */
+  .shop img {
+    margin: 0 auto; }
+  /* line 203, sass/main.scss */
+  .shop .shop-button {
+    display: flex;
+    min-width: 75px;
+    min-height: 30px;
+    justify-content: center;
+    align-items: center;
+    outline-color: #8FC7DB;
+    outline-width: 2px;
+    outline-style: solid;
+    margin: 1rem; }
+    /* line 214, sass/main.scss */
+    .shop .shop-button a {
+      color: #8FC7DB;
+      text-decoration: none; }
+  /* line 219, sass/main.scss */
+  .shop .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); }
+
+/* line 225, sass/main.scss */
+footer {
+  grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; }
+  /* line 232, sass/main.scss */
+  footer a {
+    text-decoration: none;
+    font-family: "Merriweather", serif;
+    color: black;
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 0.3rem; }
+  /* line 242, sass/main.scss */
+  footer article {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    padding-top: 1.5rem; }
+    /* line 248, sass/main.scss */
+    footer article h1 {
+      font-size: 1.2rem;
+      margin-left: 0;
+      margin-bottom: 0;
+      text-align: left; }
+    /* line 255, sass/main.scss */
+    footer article h2 {
+      font-family: "Merriweather", serif;
+      font-size: 1rem;
+      margin: 0;
+      margin-top: 0.3rem;
+      font-weight: 300; }
+  /* line 266, sass/main.scss */
+  footer article:nth-last-child(1) h1 {
+    font-size: 1.5rem; }
+
 /* The Overlay (background) */
+/* line 273, sass/main.scss */
 .overlay {
   /* Height & width depends on how you want to reveal the overlay (see JS below) */
   height: 100%;
@@ -112,6 +238,7 @@ header {
   /* The navigation links inside the overlay */
   /* When you mouse over the navigation links, change their color */
   /* Position the close button (top right corner) */ }
+  /* line 287, sass/main.scss */
   .overlay a {
     padding: 8px;
     text-decoration: none;
@@ -122,8 +249,10 @@ header {
     /* Display block instead of inline */
     transition: 0.3s;
     /* Transition effects on hover (color) */ }
+  /* line 298, sass/main.scss */
   .overlay a:hover, .overlay a:focus {
     color: #f1f1f1; }
+  /* line 303, sass/main.scss */
   .overlay .closebtn {
     position: absolute;
     top: 20px;
@@ -131,6 +260,7 @@ header {
     font-size: 60px; }
 
 /* Position the content inside the overlay */
+/* line 312, sass/main.scss */
 .overlay-content {
   position: relative;
   top: 25%;
@@ -144,9 +274,54 @@ header {
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
+  /* line 324, sass/main.scss */
   .overlay a {
     font-size: 20px; }
+  /* line 325, sass/main.scss */
   .overlay .closebtn {
     font-size: 40px;
     top: 15px;
     right: 35px; } }
+
+@media screen and (min-width: 1000px) {
+  /* line 332, sass/main.scss */
+  header {
+    background-image: url("../img/header_wide.jpg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  /* line 344, sass/main.scss */
+  .releases .beer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "Beer1" "Beer2" "Beer3"; }
+  /* line 354, sass/main.scss */
+  .releases article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    /* line 359, sass/main.scss */
+    .releases article img {
+      object-fit: cover; } }
+
+@media screen and (max-width: 1000px) {
+  /* line 373, sass/main.scss */
+  .releases .beer1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  /* line 383, sass/main.scss */
+  .releases .beer2 {
+    display: none; }
+  /* line 386, sass/main.scss */
+  .releases .beer3 {
+    display: none; }
+  /* line 391, sass/main.scss */
+  .shop-grid {
+    margin: 1rem;
+    grid-template-columns: auto 0px 0px !important;
+    grid-template-rows: auto auto; }
+    /* line 395, sass/main.scss */
+    .shop-grid img:nth-last-of-type(-n+2) {
+      display: none; } }
